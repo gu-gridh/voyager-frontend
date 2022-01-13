@@ -4,7 +4,7 @@ export default {
     },
     api: {
         base: {
-            url: 'https://voyager.gu.se/api/',
+            url: 'https://voyager.dh.gu.se/api/',
         },
         trajectory: {
             url: 'trajectory/'

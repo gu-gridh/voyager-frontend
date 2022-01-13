@@ -323,7 +323,7 @@ export default {
 
         const { timestep, ...ps } = this.form.params;
 
-        this.update({ timestep: timestep * SECONDS_PER_HOUR, ps });
+        this.update({ timestep: timestep * SECONDS_PER_HOUR, ...ps });
         this.$root.$emit("form", this.$store.state.params);
       }
     },

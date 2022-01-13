@@ -479,7 +479,7 @@ export default {
       this.progress = 0;
       this.overlay = true;
       this.error = null;
-
+      console.log(params)
       const { departurePoints, launchInterval, dates, destinationPoint, ...ps } = params;
 
       if ((departurePoints.length === 0) || (!destinationPoint)) {
@@ -501,6 +501,8 @@ export default {
       );
 
       let promises = [];
+
+      console.log(ps)
 
       for (let c of combinations) {
         let apiParams = trajectoryAPI.APIParams({
