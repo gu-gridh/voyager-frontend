@@ -1,9 +1,9 @@
 import axios from 'axios'
-
+import config from '../../assets/config'
 export default class API {
   constructor (url, params) {
     this.url = url
-    this.baseURL = 'http://127.0.0.1:5000/api'
+    this.baseURL = config.api.base.url
     this.responseType = 'json'
     this.axios = axios.create({
       baseURL: this.baseURL,
