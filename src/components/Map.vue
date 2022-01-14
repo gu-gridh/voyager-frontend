@@ -27,6 +27,7 @@ import TileLayer from "ol/layer/Tile";
 import OSM from "ol/source/OSM";
 import GeoJSON from "ol/format/GeoJSON";
 import Overlay from "ol/Overlay";
+import * as interaction from "ol/interaction"
 
 import * as control from "ol/control";
 import ContextMenu from "ol-contextmenu";
@@ -140,6 +141,7 @@ export default {
       });
 
       const map = new Map({
+        interactions: interaction.defaults({mouseWheelZoom: false}),
         controls: control.defaults().extend([attribution, contextMenuControl, tipControl]),
         target: this.$refs["map-root"],
         layers: [...this.tileLayers, this.vectorLayer],
@@ -573,15 +575,16 @@ export default {
 
 .tip {
 
-  width: 300px;
+  width: auto;
   position: absolute;
   top: .5em;
-  right: .5em;
+  left: 75px;
+  margin-right: 75px;
   padding: 15px;
   background: #f2efe9;
   color: rgb(80, 79, 79);
   opacity: 1;
-
+  border-radius: 5px;
   box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
     0 1px 5px 0 rgb(0 0 0 / 12%);
 }

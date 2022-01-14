@@ -8,7 +8,6 @@
             <v-card-subtitle>{{ header.subtitle }}</v-card-subtitle>
             <v-card-text>
               <span v-html="header.blurb"></span>
-              <!-- {{ header.blurb }} -->
               </v-card-text>
             <v-card-actions>
               <v-dialog
@@ -84,6 +83,7 @@
               </v-dialog>
             </v-card-actions>
           </v-card>
+
           <v-card color="#FFFCF5">
             <v-card-title>Settings</v-card-title>
 
@@ -202,7 +202,6 @@
               >
                 Back
               </v-btn>
-              <v-spacer></v-spacer>
               <v-btn
                 text
                 v-show="step != 2"
@@ -212,18 +211,19 @@
               >
                 Advanced
               </v-btn>
+              <v-btn text @click="clearForm"> Clear form</v-btn>
+              <v-spacer></v-spacer>
+              <v-btn id='submit' color="primary" @click="submit"> Run </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" md="8">
+        <!-- <v-col cols="12" md="8">
           <v-card-actions>
-            <v-btn text @click="clearForm"> Clear form</v-btn>
-            <v-spacer></v-spacer>
-            <v-btn color="primary" @click="submit"> Run </v-btn>
+
           </v-card-actions>
-        </v-col>
+        </v-col> -->
       </v-row>
     </v-container>
   </v-form>
@@ -360,6 +360,11 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+#submit {
+  margin-right: .5em;
+  margin-bottom: .5em;
 }
 
 .image-text {

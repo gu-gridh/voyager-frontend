@@ -2,7 +2,7 @@
   <div id="foot" class="foot">
       <v-container fluid id="foot-container">
 
-          <v-row no-gutters style="flex-wrap: nowrap;"> 
+          <v-row no-gutters> 
             <v-col align='left' justify='left' cols="2">
                 <div id='contacts' class='contacts'>
                     <b>CONTACT US:</b><br>
@@ -13,13 +13,13 @@
                 </div>
             </v-col>
             <v-col align="center" justify="center" cols="2">
-                <img height="100px" src="/assets/images/osu_long.png">
+                <img height="75px" width="auto" src="/assets/images/osu_long.png">
             </v-col>
             <v-col align="center" justify="center" cols="2">
-                <img height="100px" src="/assets/images/shfa_logo.png">
+                <img height="75px" width="auto" src="/assets/images/shfa_logo.png">
             </v-col>
             <v-col align="left" justify="center" cols="2">
-                <img height='90px' src="/assets/images/RJ_logo_white.png">
+                <img height='100px' width="auto" src="/assets/images/RJ_logo_white.png">
             </v-col>
             <v-spacer></v-spacer>
             <v-col align="right" justify="right" class="flex-grow-1 flex-shrink-0" cols="4">
