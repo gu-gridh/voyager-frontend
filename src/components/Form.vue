@@ -6,7 +6,10 @@
           <v-card color="#F2EFE9" class="my-3">
             <v-card-title>{{ header.title }}</v-card-title>
             <v-card-subtitle>{{ header.subtitle }}</v-card-subtitle>
-            <v-card-text>{{ header.blurb }}</v-card-text>
+            <v-card-text>
+              <span v-html="header.blurb"></span>
+              <!-- {{ header.blurb }} -->
+              </v-card-text>
             <v-card-actions>
               <v-dialog
                 v-model="instructionsDialog"
@@ -218,7 +221,7 @@
           <v-card-actions>
             <v-btn text @click="clearForm"> Clear form</v-btn>
             <v-spacer></v-spacer>
-            <v-btn text color="primary" @click="submit"> Run </v-btn>
+            <v-btn color="primary" @click="submit"> Run </v-btn>
           </v-card-actions>
         </v-col>
       </v-row>

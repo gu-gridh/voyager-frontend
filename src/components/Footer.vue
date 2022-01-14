@@ -12,11 +12,13 @@
                     <a href="mailto:cdh@lir.gu.se">cdh@lir.gu.se</a>        
                 </div>
             </v-col>
-
-            <v-col align="right" justify="center" cols="3">
+            <v-col align="center" justify="center" cols="2">
+                <img height="100px" src="/assets/images/osu_long.png">
+            </v-col>
+            <v-col align="center" justify="center" cols="2">
                 <img height="100px" src="/assets/images/shfa_logo.png">
             </v-col>
-            <v-col align="right" justify="center" cols="3">
+            <v-col align="left" justify="center" cols="2">
                 <img height='90px' src="/assets/images/RJ_logo_white.png">
             </v-col>
             <v-spacer></v-spacer>

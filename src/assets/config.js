@@ -25,10 +25,16 @@ export default {
     header: {
         title: "Ocean Voyager ⛵",
         subtitle: "Exploration of seafaring",
-        blurb: `The Ocean Voyager is an agent-based simulation system capable generating
-        seafaring trajectories based on winds and sea currents. Developed
-        at the Centre for Digital Humanities at the University of
-        Gothenburg.`,
+        blurb: `
+        The Ocean Voyager is an agent-based simulation tool capable of generating seafaring trajectories based on winds and sea currents. 
+        The tool is developed in collaboration by the Centre for Digital Humanities, 
+        the Department of Historical Studies, the Swedish Rock Art Research Archive at the University of Gothenburg 
+        and Ohio State University. <br><br>
+
+        Voyager will be further developed within the research programme Maritime Encounters, 
+        a counterpoint to the dominant terrestrial narrative of 
+        European prehistory (funded by Riksbankens Jubileumsfond, 2022–2027).
+        `,
     },
 
     instructions: {
@@ -92,19 +98,20 @@ export default {
         title: `About Voyager`,
         text: `Ocean Voyager simulates sea routes on a global scale, during different seasons 
         and phases in history and prehistory. The tool will provide novel approaches to analysing 
-        and validating ancient trade routes, migration and cultural exchange. <br><br>
+        and validating ancient trade routes, migration and cultural exchange. The tool is being developed 
+        in collaboration by the Centre for Digital Humanities, the Department of Historical Studies, 
+        the Swedish Rock Art Research Archive at the University of Gothenburg and Ohio State University. 
 
         Voyager utilizes experimental data on prehistoric boats with different capacity 
         (e.g. log boats, plank-built boats, bark boats, skin boats) and various modes of propulsion 
-        as affected by meteorological and oceanographic patterns. <br><br>
-
+        as affected by meteorological and oceanographic patterns. 
         These patterns are based on open-source present-day data on sea currents and wind 
         collected by Copernicus (European Union's Earth Observation Programme) 
         and ECMWF (European Centre for Medium-Range Weather Forecasts). <br><br>
 
         The tool is currently a prototype but will be fully developed within the research programme 
         Maritime Encounters a counterpoint to the dominant terrestrial narrative of European prehistory 
-        (funded by Riksbankens Jubileumsfond, 2022–2027), led by Professor Johan Ling Department of 
+        (funded by Riksbankens Jubileumsfond, 2022–2027), led by Prof. Johan Ling, Department of 
         Historical studies/SHFA, University of Gothenburg`
     },
     projection: {
