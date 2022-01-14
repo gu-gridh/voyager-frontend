@@ -1,16 +1,30 @@
 <template>
   <div id="foot" class="foot">
-      <v-container fluid id="foot-container">
+    <div class="foot-container">
+      <div id="contacts" class="contacts">
+        <b>CONTACT US:</b><br />
+        Professor Johan Ling <br />
+        <a href="mailto:johan.ling@gu.se">johan.ling@gu.se</a><br />
+        Centre for Digital Humanities<br />
+        <a href="mailto:cdh@lir.gu.se">cdh@lir.gu.se</a>
+      </div>
+      <div class="attribution-row" id="osu">
+        <img class="image-attribution"  src="/assets/images/osu_long.png" />
+      </div>
+      <div class="attribution-row" id="shfa">
+        <img class="image-attribution" src="/assets/images/shfa_logo.png" />
+      </div>
+      <div class="attribution-row" id="rj">
+        <img class="image-attribution" src="/assets/images/RJ_logo_white.png"
+        />
+      </div>
+      <div class="attribution-row" id="cdh">
+        <CdhLogo />
+      </div>
 
-          <v-row no-gutters> 
+      <!-- <v-row no-gutters> 
             <v-col align='left' justify='left' cols="2">
-                <div id='contacts' class='contacts'>
-                    <b>CONTACT US:</b><br>
-                    Professor Johan Ling <br>
-                    <a href="mailto:johan.ling@gu.se">johan.ling@gu.se</a><br>
-                    Centre for Digital Humanities<br> 
-                    <a href="mailto:cdh@lir.gu.se">cdh@lir.gu.se</a>        
-                </div>
+
             </v-col>
             <v-col align="center" justify="center" cols="2">
                 <img height="75px" width="auto" src="/assets/images/osu_long.png">
@@ -25,9 +39,8 @@
             <v-col align="right" justify="right" class="flex-grow-1 flex-shrink-0" cols="4">
                 <CdhLogo />
             </v-col>
-          </v-row>
-
-    </v-container>
+          </v-row> -->
+    </div>
   </div>
 </template>
 
@@ -41,17 +54,39 @@ export default {
 </script>
 
 <style>
+.image-attribution {
+    align-self: left;
+    max-width: 70%;
+    height: auto; 
+}
+
 .contacts {
-    font-size: 15px;
+  font-size: 15px;
+  /* width: 300px; */
+  /* display: inline-block; */
+  margin-right: 75px;
+}
+
+.attribution-row {
+  display: flex;
+  justify-content: center;
+  /* display: inline-block; */
+  /* margin: 0 40px 0 40px; */
+  /* align-self: center; */
 }
 
 a:link {
-    color: #E66E89 !important;
+  color: #e66e89 !important;
 }
 
-#foot-container {
-    margin-left: 0;
-    margin-right: 0;
+.foot-container {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .foot {
