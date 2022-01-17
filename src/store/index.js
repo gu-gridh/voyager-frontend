@@ -12,10 +12,8 @@ export default new Vuex.Store({
         params: {
             departurePoints: [],
             destinationPoint: null,
-            dates: [
-                new Date('2017-05-01').toISOString().substring(0, 10),
-                new Date('2017-05-30').toISOString().substring(0, 10)
-            ],
+            startDate: new Date('2017-05-01').toISOString().substring(0, 10),
+            endDate: new Date('2017-05-30').toISOString().substring(0, 10),
             launchInterval: 5,
             journeyLength: 30,
             timestep: 8*3600,
@@ -32,7 +30,8 @@ export default new Vuex.Store({
         ...mapMutations([
             "departurePoints",
             "destinationPoint",
-            "dates",
+            "startDate",
+            "endDate",
             "launchInterval",
             "journeyLength",
             "timestep",

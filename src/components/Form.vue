@@ -3,126 +3,25 @@
     <v-container>
       <v-row>
         <v-col>
-          <v-card color="#F2EFE9" class="my-3">
-            <v-card-title>{{ header.title }}</v-card-title>
-            <v-card-subtitle>{{ header.subtitle }}</v-card-subtitle>
-            <v-card-text>
-              <span v-html="header.blurb"></span>
-              </v-card-text>
-            <v-card-actions>
-              <v-dialog
-                v-model="instructionsDialog"
-                scrollable
-                max-width="800px"
-              >
-                <template v-slot:activator="{ on }">
-                  <v-btn
-                    v-on="on"
-                    text
-                    color="#E66E89"
-                    @click="instructionsDialog = true"
-                  >
-                    Instructions
-                  </v-btn>
-                </template>
-                <v-card>
-                  <v-card-text>
-                    <v-card-title>{{ instructions.title }}</v-card-title>
-                    <v-card-subtitle
-                      ><h3 class="pt-2">
-                        {{ instructions.subtitlePurpose }}
-                      </h3></v-card-subtitle
-                    >
-                    <span v-html="instructions.textPurpose"></span>
-                    <v-card-subtitle
-                      ><h3 class="pt-2">
-                        {{ instructions.subtitleInstructions }}
-                      </h3></v-card-subtitle
-                    >
-                    <div
-                      v-for="step in instructions.steps"
-                      v-bind:key="step.id"
-                      class="image-text"
-                    >
-                      <div class="image-text">
-                        <img :src="step.image" align="left" width="300px" />
-                      </div>
-                      <div class="image-text__text">
-                        <span v-html="step.text"></span>
-                      </div>
-                    </div>
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn text @click="instructionsDialog = false">
-                      Close
-                    </v-btn>
-                  </v-card-actions>
-                </v-card>
-              </v-dialog>
-
-              <v-dialog v-model="aboutDialog" max-width="900px">
-                <template v-slot:activator="{ on }">
-                  <v-btn
-                    v-on="on"
-                    text
-                    color="#E66E89"
-                    @click="aboutDialog = true"
-                  >
-                    About
-                  </v-btn>
-                </template>
-                <v-card>
-                  <v-card-title> {{ about.title }} </v-card-title>
-                  <v-card-text>
-                    <span v-html="about.text"></span>
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn text @click="aboutDialog = false"> Close </v-btn>
-                  </v-card-actions>
-                </v-card>
-              </v-dialog>
-            </v-card-actions>
-          </v-card>
-
+          <Header/>
+          
           <v-card color="#FFFCF5">
             <v-card-title>Settings</v-card-title>
 
             <v-window v-model="step">
-              <v-window-item :value="1">
-                <v-dialog
-                  ref="dialog"
-                  v-model="form.modal"
-                  :return-value.sync="form.dates"
-                  width="290px"
-                >
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-text-field
-                      ref="datesField"
-                      v-model="dateRangeText"
-                      label="Select a date range:"
-                      :rules="rules.dates"
-                      readonly
-                      v-bind="attrs"
-                      v-on="on"
-                      required
-                      outlined
-                      class="px-8 pt-2"
-                    ></v-text-field>
-                  </template>
-                  <v-date-picker v-model="form.params.dates" range scrollable>
-                    <v-spacer></v-spacer>
-                    <v-btn text color="primary" @click="form.modal = false">
-                      Cancel
-                    </v-btn>
-                    <v-btn
-                      text
-                      color="primary"
-                      @click="$refs.dialog.save(form.params.dates)"
-                    >
-                      OK
-                    </v-btn>
-                  </v-date-picker>
-                </v-dialog>
+              <v-window-item :value="1">  
+
+                <date-range-input 
+                  name="start" 
+                  color="primary" 
+                  label="Start date"
+                  v-model="form.params.startDate"/>
+
+                <date-range-input 
+                  name="end" 
+                  color="primary" 
+                  label="End date"
+                  v-model="form.params.endDate"/>
 
                 <v-select
                   v-model="form.params.propulsionType"
@@ -213,17 +112,13 @@
               </v-btn>
               <v-btn text @click="clearForm"> Clear form</v-btn>
               <v-spacer></v-spacer>
-              <v-btn id='submit' color="primary" @click="submit"> Run </v-btn>
+              <v-btn id="submit" color="primary" @click="submit"> Run </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
       <v-row>
-        <!-- <v-col cols="12" md="8">
-          <v-card-actions>
 
-          </v-card-actions>
-        </v-col> -->
       </v-row>
     </v-container>
   </v-form>
@@ -234,12 +129,22 @@ import config from "../assets/config";
 import rules from "../assets/rules";
 import vesselsAPI from "./api/vessels.api";
 
+import DateRangeInput from './inputs/DateRangeInput.vue'
+import Header from './Header.vue'
+
 export default {
+
+  components: {
+    DateRangeInput,
+    Header
+  },
+
   data() {
     // A default form with data from the store
     const defaultForm = Object.freeze({
       params: {
-        dates: this.$store.state.params.dates,
+        startDate: this.$store.state.params.startDate,
+        endDate: this.$store.state.params.endDate,
         launchInterval: this.$store.state.params.launchInterval,
         journeyLength: this.$store.state.params.journeyLength,
         timestep: this.$store.state.params.timestep / 3600,
@@ -247,7 +152,6 @@ export default {
         vesselType: this.$store.state.params.vesselType,
         paddlingSpeed: this.$store.state.params.paddlingSpeed,
       },
-      modal: false,
     });
 
     return {
@@ -263,6 +167,8 @@ export default {
       // Controls the advanced settings tab
       step: 1,
 
+      startMenu: false,
+      endMenu: false,
       instructionsDialog: false,
       aboutDialog: false,
 
@@ -274,33 +180,11 @@ export default {
   },
 
   computed: {
-    start_date() {
-      if (this.form.dates.length === 2) {
-        return this.form.dates[0];
-      } else {
-        return undefined;
-      }
-    },
-
-    end_date() {
-      if (this.form.dates.length === 2) {
-        return this.form.dates[1];
-      } else {
-        return undefined;
-      }
-    },
 
     isPaddling() {
       return this.form.params.propulsionType === "paddling";
     },
 
-    dateRangeText() {
-      if (this.form.params.dates) {
-        return this.form.params.dates.join(" ~ ");
-      } else {
-        return undefined;
-      }
-    },
   },
 
   mounted: function () {
@@ -363,8 +247,8 @@ export default {
 }
 
 #submit {
-  margin-right: .5em;
-  margin-bottom: .5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .image-text {

@@ -18,8 +18,8 @@
         <img class="image-attribution" src="/assets/images/RJ_logo_white.png"
         />
       </div>
-      <div class="attribution-row" id="cdh">
-        <CdhLogo />
+      <div class="attribution-row">
+        <CdhLogo id="cdh" />
       </div>
 
       <!-- <v-row no-gutters> 
@@ -56,15 +56,34 @@ export default {
 <style>
 .image-attribution {
     align-self: left;
-    max-width: 70%;
+    max-width: 300px;
+    max-height: 100px;
     height: auto; 
+    margin-left: 30px;
+    margin-right: 30px;
+
 }
+
+
 
 .contacts {
   font-size: 15px;
   /* width: 300px; */
   /* display: inline-block; */
   margin-right: 75px;
+      align-self: left;
+    max-width: 300px;
+    max-height: 100px;
+    height: auto; 
+}
+
+#cdh {
+      align-self: left;
+    max-width: 300px;
+    max-height: 100px;
+    height: auto; 
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .attribution-row {
