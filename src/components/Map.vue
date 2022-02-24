@@ -482,7 +482,7 @@ export default {
       this.overlay = true;
       this.error = null;
       console.log(params)
-      const { departurePoints, launchInterval, dates, destinationPoint, ...ps } = params;
+      const { departurePoints, launchInterval, startDate, endDate, destinationPoint, ...ps } = params;
 
       if ((departurePoints.length === 0) || (!destinationPoint)) {
         this.error = "Please enter a destination and departure on the map."
@@ -495,7 +495,7 @@ export default {
       }
 
       // const trajectories = []
-      const dateRange = this.datesInRange(dates, launchInterval);
+      const dateRange = this.datesInRange([startDate, endDate], launchInterval);
 
       // Combine dates and departure points to single iterable
       const combinations = dateRange.flatMap((d) =>
