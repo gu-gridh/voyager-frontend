@@ -11,17 +11,23 @@
             <v-window v-model="step" style="padding:3px 0 0 0;">
               <v-window-item :value="1" >  
 
+<div style="width:100%">
+  <div style="width:50%; float:left;">
                 <date-range-input 
                   name="start" 
                   color="primary" 
                   label="Start date"
                   v-model="form.params.startDate"/>
+                      </div>
 
+ <div style="width:50%; float:left;">
                 <date-range-input 
                   name="end" 
                   color="primary" 
                   label="End date"
                   v-model="form.params.endDate"/>
+    </div>
+                  </div>
 
                 <v-select
                   v-model="form.params.propulsionType"
