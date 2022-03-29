@@ -9,7 +9,7 @@
             <v-card-title></v-card-title>
 
             <v-window v-model="step" style="padding:5px 0 0 0;">
-              <v-window-item :value="1">  
+              <v-window-item :value="1" >  
 
                 <date-range-input 
                   name="start" 
@@ -98,7 +98,7 @@
                 :disabled="step === 1"
                 text
                 @click="step--"
-                style="font-size:18px; font-weight:600; left:10px; margin-bottom:20px;"
+                style="font-size:18px; font-weight:300; left:10px; margin-bottom:20px;"
               >
                 Back
               </v-btn>
@@ -107,12 +107,12 @@
                 v-show="step != 2"
                 :disabled="step === 2"
                 color="black"
-                 style="font-size:18px; font-weight:600; left:10px; margin-bottom:20px;"
+                 style="font-size:18px; font-weight:300; left:10px; margin-bottom:20px;"
                 @click="step++"
               >
                 Advanced
               </v-btn>
-              <v-btn text @click="clearForm"  style="font-size:18px; font-weight:600; left:10px; margin-bottom:20px;"> Clear form</v-btn>
+              <v-btn text @click="clearForm"  style="font-size:18px; font-weight:300; left:10px; margin-bottom:20px;"> Clear form</v-btn>
               <v-spacer></v-spacer>
               <v-btn id="submit" color="primary" style="font-size:22px; padding:25px; font-weight:600; right:10px; margin-bottom:20px;" @click="submit"> <b>Run</b> </v-btn>
             </v-card-actions>

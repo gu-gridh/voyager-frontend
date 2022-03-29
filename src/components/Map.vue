@@ -561,11 +561,14 @@ export default {
 
 
 .ol-control button {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:28px;
   background: #f2efe9;
   color: rgb(80, 79, 79);
     border-radius: 50%;
       width: 45px;
   height: 45px;
+   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .ol-control button:active, .ol-control button:hover, .ol-control button:focus {
@@ -574,8 +577,8 @@ export default {
 }
 
 .ol-zoom-in {
-  left:500px;
-  top:2.5em;
+  left:480px;
+  top:1.4em;
    position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
@@ -585,13 +588,14 @@ export default {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .ol-zoom-out {
-   left:500px;
-    top:5.5em;
+   left:480px;
+    top:3.2em;
      position: fixed;
   margin-top: 3px;
 
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.8);
+  
 }
 .ol-zoom-out:hover {
   background-color: rgba(0, 0, 0, 0.7);
@@ -602,21 +606,38 @@ width:0px;
 }
 
 .tip {
+  letter-spacing: 0px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.2;
+   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
   position: fixed;
-  width: 630px;
-  top: 2.5em;
+  width: auto;
+  top: 2.0em;
   left: calc(50% - 100px);
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
   background-color:rgba(250,250,250,0.6);
-  color: rgb(80, 79, 79);
+  color: rgb(0, 0, 0);
   opacity: 1;
-  border-radius: 5px;
+  border-radius: 8px;
    backdrop-filter: blur(5px);
-  /* box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%); */
+     transition: all 0.5s ease-in-out;
 }
 
+@media screen and (max-width: 1300px) {
+.tip {
+   width: 360px;
+     left: calc(50% + 80px);
+}
+}
+
+@media screen and (max-width: 900px) {
+.tip {
+display:none
+}
+}
 
 /* Tooltip container */
 .tooltip {

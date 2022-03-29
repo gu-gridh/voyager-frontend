@@ -45,7 +45,7 @@ export default {
 /*@import './GUITemplate/css/utilities.css';*/
 
 @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Clicker+Script&display=swap');
 
 .foot {
@@ -80,7 +80,7 @@ export default {
 ;    /* background-color: #788f97; */
     width:540px;
     height:calc(100vh);
- min-height:980px;
+ min-height:1000px;
     padding:10px;
     transform: scale(0.9);
       transform-origin: top left;
@@ -90,7 +90,7 @@ export default {
 
   position:relative;
   height:calc(100vh);
-  min-height:980px;
+  min-height:1000px;
  box-shadow: -1rem 0rem 1rem rgba(0, 0, 0, 0.2);
 }
 

@@ -1,8 +1,8 @@
 <template>
   <v-card color="" style="box-shadow:none; border-radius:15px 15px 0 0; border-width:0 0 0.5px 0; border-style:dashed; border-color:grey; padding:20px 0 0 0; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
-    <div style="color:black; margin-left:20px;  font-size:90px; font-weight:100; line-height: 0.8; hyphens:manual; margin-bottom:30px;">Ocean <br> Voyager ⛵️</div>
-    <div style="color:black;  font-weight:600; margin-left:20px; font-size:27px">{{ header.subtitle }}</div>
-    <div style="color:black;  opacity:1; font-weight:300; font-size:19px; line-height: 1.25; text-align:justify; padding:5px 20px 20px 20px;">
+    <div style="color:black; margin-left:30px;  font-size:90px; font-weight:100; line-height: 0.8; margin-bottom:30px;">Ocean <br> Voyager ⛵️</div>
+    <div style="color:black;  font-weight:300; margin-left:35px; font-size:27px">{{ header.subtitle }}</div>
+    <div style="color:black;  opacity:1; font-weight:300; font-size:19px; line-height: 1.25; text-align:justify; padding:5px 35px 20px 35px;">
       <span v-html="header.blurb"></span>
     </div>
     
@@ -13,7 +13,7 @@
             v-on="on"
             text
             color="#000000"
-            style="font-size:20px; font-weight:600; left:5px; margin-bottom:20px; margin-right:30px;"
+            style="font-size:20px; font-weight:300; left:18px; margin-bottom:20px; margin-right:30px;"
             @click="instructionsDialog = true"
           >
             Instructions
@@ -21,14 +21,14 @@
         </template>
         <v-card style="font-family: 'Barlow Condensed', sans-serif; ">
           <v-card-text>
-            <v-card-title style="font-size:30px; margin-top:15px;"><b>{{ instructions.title }}</b></v-card-title>
+            <v-card-title style="font-size:30px; font-weight:100;  margin-top:15px;"><b>{{ instructions.title }}</b></v-card-title>
             <v-card-subtitle
-              ><h3 class="pt-2"  style="font-size:22px">
+              ><h3 class="pt-2"  style="font-size:22px; font-weight:400;">
                 {{ instructions.subtitlePurpose }}
               </h3></v-card-subtitle>
-            <div  style="font-size:18px; font-weight:600; padding:0 17px 0px 17px;" v-html="instructions.textPurpose"></div>
+            <div  style="font-size:18px; font-weight:400; padding:0 17px 0px 17px;" v-html="instructions.textPurpose"></div>
             <v-card-subtitle
-              ><h3 class="pt-2"  style="font-size:22px">
+              ><h3 class="pt-2"  style="font-size:22px; font-weight:400;">
                 {{ instructions.subtitleInstructions }}
               </h3></v-card-subtitle
             >
@@ -37,10 +37,10 @@
               v-bind:key="step.id"
               class="image-text"
             >
-              <div class="image-text" style="font-size:18px; font-weight:600;">
+              <div class="image-text" style="font-size:18px; font-weight:400;">
                 <img :src="step.image" align="left" width="300px" style="margin-left:17px;" />
               </div>
-              <div class="image-text__text" style="font-size:16px; font-weight:600; line-height:1.2">
+              <div class="image-text__text" style="font-size:16px; font-weight:400; line-height:1.2">
                 <span v-html="step.text"></span>
               </div>
             </div>
@@ -53,14 +53,14 @@
 
       <v-dialog v-model="aboutDialog" max-width="900px">
         <template v-slot:activator="{ on }">
-          <v-btn v-on="on" text color="#000000"  style="font-size:20px; font-weight:600; margin-bottom:20px;" @click="aboutDialog = true">
+          <v-btn v-on="on" text color="#000000"  style="font-size:20px; font-weight:300; margin-bottom:20px;" @click="aboutDialog = true">
             About
           </v-btn>
         </template>
         <v-card style="font-family: 'Barlow Condensed', sans-serif; ">
-          <v-card-title  style="font-size:30px; padding: 30px 20px 10px 40px;"> {{ about.title }} </v-card-title>
+          <v-card-title  style="font-size:30px; font-weight:200;padding: 30px 20px 10px 40px;"> {{ about.title }} </v-card-title>
           <v-card-text>
-            <div style="font-size:18px; font-weight:600; padding:0 17px 0px 17px;" v-html="about.text"></div>
+            <div style="font-size:18px; font-weight:400; padding:0 17px 0px 17px;" v-html="about.text"></div>
               </v-card-text>
 
               <div id="contacts" class="contacts">
