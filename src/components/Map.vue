@@ -577,7 +577,7 @@ export default {
 }
 
 .ol-zoom-in {
-  left:480px;
+  left:520px;
   top:1.4em;
    position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
@@ -588,7 +588,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .ol-zoom-out {
-   left:480px;
+   left:520px;
     top:3.05em;
      position: fixed;
   margin-top: 3px;
@@ -624,14 +624,14 @@ width:0px;
      transition: all 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
 .tip {
    width: 360px;
      left: calc(50% + 80px);
 }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
 .tip {
 display:none
 }

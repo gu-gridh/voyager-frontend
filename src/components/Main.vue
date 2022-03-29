@@ -79,7 +79,7 @@ export default {
   position:absolute;
   background-color: rgba(200,200,200,0.0)
 ;    /* background-color: #788f97; */
-    width:540px;
+    width:600px;
     height:calc(100vh);
  min-height:980px;
     padding:10px;
