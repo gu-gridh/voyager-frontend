@@ -14,19 +14,18 @@
             text
             color="#000000"
             style="font-size:20px; font-weight:300; left:18px; margin-bottom:10px; margin-right:30px;"
-            @click="instructionsDialog = true"
-          >
+            @click="instructionsDialog = true">
             Instructions
           </v-btn>
         </template>
         <v-card style="font-family: 'Barlow Condensed', sans-serif; ">
           <v-card-text>
-            <v-card-title style="color:black; font-size:30px; font-weight:100;  margin-top:15px;"><b>{{ instructions.title }}</b></v-card-title>
+            <v-card-title style="color:black; font-size:30px; font-weight:300;  margin-top:15px;">{{ instructions.title }}</v-card-title>
             <v-card-subtitle
-              ><h3 class="pt-2"  style="color:black; font-size:22px; font-weight:400;">
+              ><h3 class="pt-2"  style="color:black; font-size:22px; font-weight:400; margin-top:10px;">
                 {{ instructions.subtitlePurpose }}
               </h3></v-card-subtitle>
-            <div  style="font-size:18px; font-weight:400; padding:0 17px 0px 17px;" v-html="instructions.textPurpose"></div>
+            <div  style="color:black;font-size:18px; font-weight:300; text-align:justify; padding:0 17px 0px 17px; margin-top:-10px;" v-html="instructions.textPurpose"></div>
             <v-card-subtitle
               ><h3 class="pt-2"  style="color:black; font-size:22px; font-weight:400;">
                 {{ instructions.subtitleInstructions }}
@@ -57,10 +56,10 @@
             About
           </v-btn>
         </template>
-        <v-card style="font-family: 'Barlow Condensed', sans-serif; ">
-          <v-card-title  style="font-size:30px; font-weight:200; padding: 30px 20px 10px 40px;"> {{ about.title }} </v-card-title>
+        <v-card style="color:black;font-family: 'Barlow Condensed', sans-serif; ">
+          <v-card-title  style="color:black;font-size:30px; font-weight:300; padding: 30px 20px 10px 40px;"> {{ about.title }} </v-card-title>
           <v-card-text>
-            <div style="font-size:18px; font-weight:400; padding:0 17px 0px 17px;" v-html="about.text"></div>
+            <div style="color:black;font-size:18px; font-weight:300; text-align:justify; padding:0 17px 0px 17px;" v-html="about.text"></div>
               </v-card-text>
 
               <div id="contacts" class="contacts">
@@ -141,6 +140,7 @@ export default {
   position:relative;
 float:left;
 width:100%;
+padding:25px;
 }
 
 .image-container{
