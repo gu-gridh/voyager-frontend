@@ -89,8 +89,8 @@ export default {
 #map-container {
 
   position:relative;
-    height:calc(100vh);
-    min-height:980px;
+  height:calc(100vh);
+  min-height:980px;
  box-shadow: -1rem 0rem 1rem rgba(0, 0, 0, 0.2);
 }
 

@@ -19,17 +19,16 @@
             Instructions
           </v-btn>
         </template>
-        <v-card>
+        <v-card style="font-family: 'Barlow Condensed', sans-serif; ">
           <v-card-text>
-            <v-card-title>{{ instructions.title }}</v-card-title>
+            <v-card-title style="font-size:30px; margin-top:15px;"><b>{{ instructions.title }}</b></v-card-title>
             <v-card-subtitle
-              ><h3 class="pt-2">
+              ><h3 class="pt-2"  style="font-size:22px">
                 {{ instructions.subtitlePurpose }}
-              </h3></v-card-subtitle
-            >
-            <span v-html="instructions.textPurpose"></span>
+              </h3></v-card-subtitle>
+            <div  style="font-size:18px; font-weight:600; padding:0 17px 0px 17px;" v-html="instructions.textPurpose"></div>
             <v-card-subtitle
-              ><h3 class="pt-2">
+              ><h3 class="pt-2"  style="font-size:22px">
                 {{ instructions.subtitleInstructions }}
               </h3></v-card-subtitle
             >
@@ -38,10 +37,10 @@
               v-bind:key="step.id"
               class="image-text"
             >
-              <div class="image-text">
-                <img :src="step.image" align="left" width="300px" />
+              <div class="image-text" style="font-size:18px; font-weight:600;">
+                <img :src="step.image" align="left" width="300px" style="margin-left:17px;" />
               </div>
-              <div class="image-text__text">
+              <div class="image-text__text" style="font-size:16px; font-weight:600; line-height:1.2">
                 <span v-html="step.text"></span>
               </div>
             </div>
@@ -58,10 +57,10 @@
             About
           </v-btn>
         </template>
-        <v-card>
-          <v-card-title> {{ about.title }} </v-card-title>
+        <v-card style="font-family: 'Barlow Condensed', sans-serif; ">
+          <v-card-title  style="font-size:30px; padding: 30px 20px 10px 40px;"> {{ about.title }} </v-card-title>
           <v-card-text>
-            <span v-html="about.text"></span>
+            <div style="font-size:18px; font-weight:600; padding:0 17px 0px 17px;" v-html="about.text"></div>
               </v-card-text>
 
               <div id="contacts" class="contacts">
@@ -128,9 +127,9 @@ export default {
 <style>
 
 .contacts {
-  font-size: 15px;
+  font-size: 18px;
 
-  margin-left: 25px;
+  margin-left: 40px;
   align-self: left;
   max-width: 300px;
   max-height: 100px;
@@ -138,6 +137,7 @@ export default {
 }
 
 #logotypes{
+  pointer-events: none;
   position:relative;
 float:left;
 width:100%;
