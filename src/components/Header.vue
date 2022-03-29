@@ -1,5 +1,5 @@
 <template>
-  <v-card color="" style="box-shadow:none; border-radius:15px 15px 0 0; border-width:0 0 0.5px 0; border-style:dashed; border-color:grey; padding:20px 0 0 0; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1); background-color:rgba(255,255,255,0.6);   backdrop-filter: blur(20px);">
+  <v-card color="" style="box-shadow:none; border-radius:15px 15px 0 0; border-width:0 0 0.5px 0; border-style:dashed; border-color:grey; padding:20px 0 0 0; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
     <div style="color:black; margin-left:20px;  font-size:90px; font-weight:100; line-height: 0.8; hyphens:manual; margin-bottom:30px;">Ocean <br> Voyager ⛵️</div>
     <div style="color:black;  font-weight:600; margin-left:20px; font-size:27px">{{ header.subtitle }}</div>
     <div style="color:black;  opacity:1; font-weight:300; font-size:19px; line-height: 1.25; text-align:justify; padding:5px 20px 20px 20px;">

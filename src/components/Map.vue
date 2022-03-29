@@ -574,7 +574,7 @@ export default {
 }
 
 .ol-zoom-in {
-  left:580px;
+  left:500px;
   top:2.5em;
    position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
@@ -585,7 +585,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .ol-zoom-out {
-   left:580px;
+   left:500px;
     top:5.5em;
      position: fixed;
   margin-top: 3px;
