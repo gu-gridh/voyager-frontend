@@ -70,6 +70,7 @@ export default {
 }
 
 .sidebar-container {
+    pointer-events: none;
   font-family: "Barlow Condensed", sans-serif;
   font-weight:600;
   margin-left:0px;

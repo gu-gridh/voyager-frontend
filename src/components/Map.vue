@@ -565,7 +565,7 @@ export default {
     font-size:28px;
   background: #f2efe9;
   color: rgb(80, 79, 79);
-    border-radius: 50%;
+    border-radius: 0%;
       width: 45px;
   height: 45px;
    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -581,7 +581,7 @@ export default {
   top:1.4em;
    position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 50%;
+
 
 }
 .ol-zoom-in:hover {
@@ -589,11 +589,9 @@ export default {
 }
 .ol-zoom-out {
    left:480px;
-    top:3.2em;
+    top:3.05em;
      position: fixed;
   margin-top: 3px;
-
-  border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.8);
   
 }
@@ -618,11 +616,11 @@ width:0px;
   top: 2.0em;
   left: calc(50% - 100px);
   padding: 15px;
-  background-color:rgba(250,250,250,0.6);
+  background-color:rgba(250,250,250,0.7);
   color: rgb(0, 0, 0);
   opacity: 1;
   border-radius: 8px;
-   backdrop-filter: blur(5px);
+   backdrop-filter: blur(3px);
      transition: all 0.5s ease-in-out;
 }
 
