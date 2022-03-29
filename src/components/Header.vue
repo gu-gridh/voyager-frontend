@@ -1,17 +1,19 @@
 <template>
-  <v-card color="#F2EFE9" class="my-3">
-    <v-card-title>{{ header.title }}</v-card-title>
-    <v-card-subtitle>{{ header.subtitle }}</v-card-subtitle>
-    <v-card-text>
+  <v-card color="#788f97" style="box-shadow:none;">
+    <div style="color:white; margin-left:20px; font-size:90px; font-weight:100; line-height: 0.8; hyphens:manual; margin-bottom:30px;">Ocean <br> Voyager ⛵️</div>
+    <div style="color:white;  font-weight:600; margin-left:20px; font-size:27px">{{ header.subtitle }}</div>
+    <div style="color:white;  opacity:1; font-weight:300; font-size:19px; line-height: 1.25; text-align:justify; padding:5px 20px 20px 20px;">
       <span v-html="header.blurb"></span>
-    </v-card-text>
+    </div>
+    
     <v-card-actions>
       <v-dialog v-model="instructionsDialog" scrollable max-width="800px">
         <template v-slot:activator="{ on }">
           <v-btn
             v-on="on"
             text
-            color="#E66E89"
+            color="#ffffff"
+            style="font-size:20px; font-weight:600; left:5px; margin-bottom:20px; margin-right:30px;"
             @click="instructionsDialog = true"
           >
             Instructions
@@ -52,7 +54,7 @@
 
       <v-dialog v-model="aboutDialog" max-width="900px">
         <template v-slot:activator="{ on }">
-          <v-btn v-on="on" text color="#E66E89" @click="aboutDialog = true">
+          <v-btn v-on="on" text color="#ffffff"  style="font-size:20px; font-weight:600; margin-bottom:20px;" @click="aboutDialog = true">
             About
           </v-btn>
         </template>
@@ -60,9 +62,43 @@
           <v-card-title> {{ about.title }} </v-card-title>
           <v-card-text>
             <span v-html="about.text"></span>
-          </v-card-text>
+              </v-card-text>
+
+              <div id="contacts" class="contacts">
+          <b>CONTACT US:</b><br />
+          Professor Johan Ling <br />
+          <a href="mailto:johan.ling@gu.se">johan.ling@gu.se</a><br />
+          Centre for Digital Humanities<br />
+          <a href="mailto:cdh@lir.gu.se">cdh@lir.gu.se</a>
+        </div>
+
+            <div id="logotypes" style=margin-top:-100px;>   
+              
+               <div style="float:right;">
+                      <div class="image-container" style="width:350px; height:120px">
+              <img class="image-attribution" src="/assets/images/osu_long.png" />
+                 </div>
+                     </div>
+                    
+                    <div style="float:right;">
+                      <div class="image-container"  style="width:220px; height:120px">
+                  <img class="image-attribution"   src="/assets/images/CDH_logo_black.svg"/>
+                     </div>
+
+                          <div class="image-container" style="width:150px; height:120px">
+               <img class="image-attribution" src="/assets/images/shfa_logo_black.png" />
+                  </div>
+
+        
+                  <div class="image-container"  style="width:400p; height:150px; float:right;">
+                  <img class="image-attribution"   src="/assets/images/RJ_logo_black.png"/>
+                  </div>
+                 </div>
+             </div>
+
+        
           <v-card-actions>
-            <v-btn text @click="aboutDialog = false"> Close </v-btn>
+            <v-btn text @click="aboutDialog = false" style="float:left;"> Close </v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
@@ -88,3 +124,65 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.contacts {
+  font-size: 15px;
+
+  margin-left: 25px;
+  align-self: left;
+  max-width: 300px;
+  max-height: 100px;
+  height: auto;
+}
+
+#logotypes{
+  position:relative;
+float:left;
+width:100%;
+}
+
+.image-container{
+float:right;
+width:380px;
+height:200px;
+  padding:30px;
+}
+
+.image-attribution {
+  display: block;
+  width: 100%;
+    margin-left: auto;
+  margin-right: auto;
+    margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.title-style {
+
+  color:#ffffff;
+    
+  margin-bottom:20px;
+}
+
+.subtitle-style {
+  font-size:120%;
+  color:white;
+
+}
+
+.text-style {
+  color:white;
+  line-height: 0.8;
+}
+
+.v-card {
+  color:white;
+}
+
+.ov-button{
+font-size:80px;
+}
+</style>

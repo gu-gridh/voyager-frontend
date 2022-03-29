@@ -540,13 +540,7 @@ export default {
 
 <style>
 
-.ol-ctx-menu-zoom-out {
-  background-image: url("https://img.icons8.com/material/50/000000/minus--v2.png") !important;
-}
 
-.ol-ctx-menu-zoom-in {
-  background-image: url("https://img.icons8.com/material/50/000000/plus-math--v2.png") !important;
-}
 
 .ol-ctx-menu-container {
   padding: 1.5em;
@@ -555,17 +549,23 @@ export default {
  }
 
 .ol-ctx-menu-container li.ol-ctx-menu-separator hr {
+  
    background-image: none;
 
 }
 
 .ol-ctx-menu-container ul {
+ 
   padding-left: 0px !important;
 }
+
 
 .ol-control button {
   background: #f2efe9;
   color: rgb(80, 79, 79);
+    border-radius: 50%;
+      width: 45px;
+  height: 45px;
 }
 
 .ol-control button:active, .ol-control button:hover, .ol-control button:focus {
@@ -573,20 +573,48 @@ export default {
 
 }
 
-.tip {
+.ol-zoom-in {
+  left:580px;
+  top:2.5em;
+   position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
 
-  width: auto;
-  position: absolute;
-  top: .5em;
-  left: 75px;
-  margin-right: 75px;
-  padding: 15px;
-  background: #f2efe9;
+}
+.ol-zoom-in:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.ol-zoom-out {
+   left:580px;
+    top:5.5em;
+     position: fixed;
+  margin-top: 3px;
+
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.ol-zoom-out:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.ol-control {
+width:0px;
+
+}
+
+.tip {
+  text-align: center;
+  position: fixed;
+  width: 630px;
+  top: 2.5em;
+  left: calc(50% - 50px);
+  padding: 15px 15px 15px 15px;
+  background-color:rgba(250,250,250,0.6);
   color: rgb(80, 79, 79);
   opacity: 1;
   border-radius: 5px;
-  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
+   backdrop-filter: blur(5px);
+  /* box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%); */
 }
 
 
