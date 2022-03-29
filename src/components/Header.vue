@@ -1,8 +1,8 @@
 <template>
-  <v-card color="" style="pointer-events:auto;box-shadow:none; border-radius:20px 20px 0 0; border-width:0 0 0.5px 0; border-style:dashed; border-color:grey; padding:20px 0 0 0; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
-    <div style="color:black; margin-left:30px;  font-size:90px; font-weight:100; line-height: 0.75; margin-bottom:30px;">Ocean <br> Voyager ⛵️</div>
-    <div style="color:black;  font-weight:300; margin-left:35px; font-size:27px">{{ header.subtitle }}</div>
-    <div style="color:black;  opacity:1; font-weight:300; font-size:19px; line-height: 1.25; text-align:justify; padding:5px 35px 20px 35px;">
+  <v-card color="" style="color:black;pointer-events:auto;box-shadow:none; border-radius:20px 20px 0 0; border-width:0 0 0.5px 0; border-style:dashed; border-color:grey; padding:20px 0 0 0; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
+    <div style=" margin-left:30px;  font-size:90px; font-weight:100; line-height: 0.75; margin-bottom:30px;">Ocean<br>Voyager ⛵️</div>
+    <div style="  font-weight:300; margin-left:35px; font-size:30px">{{ header.subtitle }}</div>
+    <div style=" opacity:1; font-weight:300; font-size:19px; line-height: 1.25; text-align:justify; padding:5px 35px 20px 35px;">
       <span v-html="header.blurb"></span>
     </div>
     
@@ -12,8 +12,7 @@
           <v-btn
             v-on="on"
             text
-            color="#000000"
-            style="font-size:20px; font-weight:300; left:18px; margin-bottom:10px; margin-right:30px;"
+            style="font-size:20px; font-weight:400; left:18px; margin-bottom:10px; margin-right:30px;"
             @click="instructionsDialog = true">
             Instructions
           </v-btn>
@@ -52,7 +51,7 @@
 
       <v-dialog v-model="aboutDialog" max-width="900px">
         <template v-slot:activator="{ on }">
-          <v-btn v-on="on" text color="#000000"  style="font-size:20px; font-weight:300; margin-bottom:10px;" @click="aboutDialog = true">
+          <v-btn v-on="on" text style="font-size:20px; font-weight:400; margin-bottom:10px;" @click="aboutDialog = true">
             About
           </v-btn>
         </template>
