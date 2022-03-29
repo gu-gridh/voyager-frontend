@@ -606,7 +606,7 @@ width:0px;
   position: fixed;
   width: 630px;
   top: 2.5em;
-  left: calc(50% - 50px);
+  left: calc(50% - 100px);
   padding: 15px 15px 15px 15px;
   background-color:rgba(250,250,250,0.6);
   color: rgb(80, 79, 79);
