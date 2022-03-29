@@ -14,7 +14,7 @@ export default {
         }
     },
     data: '',
-    tip: '🖱️ Right click on the map to add departure points and a destination for your vessels!',
+    tip: 'Right-click on the map to add departure points and a destination for your vessels!',
     icons: {
         pin: "https://img.icons8.com/small/50/000000/sailing-ship-small.png",
         target: "https://img.icons8.com/small/50/000000/finish-flag.png",
