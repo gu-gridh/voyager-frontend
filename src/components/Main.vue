@@ -1,15 +1,16 @@
 <template>
     <v-main>
       <div id="main-container">
+        <div id="map-container">
+            <Map/>
+          </div>
         <div id="content-row" no-gutters>
             <div class="sidebar-container">
             <div class="sidebar pa-5">
               <Form/>
             </div>
           </div>
-        <div id="map-container">
-            <Map/>
-          </div>
+        
         </div>
       </div>
     <!--   <Footer/> -->
@@ -72,20 +73,22 @@ export default {
   font-family: "Barlow Condensed", sans-serif;
   font-weight:600;
   margin-left:0px;
+  top:0;
   float:left;
-  position:relative;
-    background-color: #788f97;
+  position:absolute;
+  background-color: rgba(200,200,200,0.0)
+;    /* background-color: #788f97; */
     width:540px;
     height:calc(100vh);
-    min-height:1080px;
+    min-height:1100px;
     padding:10px;
 }
+
 #map-container {
-  flex-grow:1;
-   float:left;
+
   position:relative;
     height:calc(100vh);
-    min-height:1080px;
+    min-height:1100px;
  box-shadow: -1rem 0rem 1rem rgba(0, 0, 0, 0.2);
 }
 

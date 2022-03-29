@@ -5,7 +5,7 @@
         <v-col>
           <Header/>
           
-          <v-card color="#FFFCF5" style="border-radius:15px; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);">
+          <v-card color="" style="border-radius:0 0 15px 15px; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2); background-color:rgba(255,255,255,0.6);   backdrop-filter: blur(20px);">
             <v-card-title></v-card-title>
 
             <v-window v-model="step" style="padding:5px 0 0 0;">

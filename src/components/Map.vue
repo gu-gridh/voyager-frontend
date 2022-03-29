@@ -1,5 +1,5 @@
 <template>
-  <div ref="map-root" style="position: relative; width: 100%; height: 100%">
+  <div ref="map-root" style="position: relative; width: 100%; height: 100%; background-color:#b2d2dd;">
     <div ref="tip" class="tip">{{ tip }}</div>
     <div ref="tooltip" class="tooltip"></div>
     <v-overlay :value="overlay" :absolute="true">
