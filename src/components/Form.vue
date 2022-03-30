@@ -303,16 +303,17 @@ export default {
 
 .v-list-item__content{
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
   font-weight:400;
   line-height:1.2;
 }
 
 .v-label{
-  font-size: 18px;
+  font-size: 19px;
   font-weight:600;
   line-height:1.2;
 }
+
+
 
 
 

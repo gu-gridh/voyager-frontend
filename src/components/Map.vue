@@ -69,27 +69,27 @@ export default {
     contextMenuItems() {
       return [
         {
-          text: "Add a departure point",
+          text: "&nbsp;&nbsp;Add a departure point",
           classname: "departure-marker",
           icon: this.icons.pin,
           callback: this.addDepartureMarker,
         },
 
         {
-          text: "Add a destination point",
+          text: "&nbsp;&nbsp;Add a destination point",
           classname: "destination-marker",
           icon: this.icons.target,
           callback: this.addDestinationMarker,
         },
 
         {
-          text: "Clear all markers",
+          text: "&nbsp;&nbsp;Clear all markers",
           icon: this.icons.clear,
           callback: this.clearMarkers,
         },
 
         {
-          text: "Remove all trajectories",
+          text: "&nbsp;&nbsp;Remove all trajectories",
           icon: this.icons.clear,
           callback: this.removeAllTrajectories,
         },
@@ -543,20 +543,35 @@ export default {
 
 
 .ol-ctx-menu-container {
-  padding: 1.5em;
-  background: #f2efe9;
-  color: rgb(80, 79, 79);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:17px;
+    font-weight:300;
+  padding: 1.0em;
+  background-color:rgba(255,255,255,0.8);
+  color: black;
+  opacity:0.8;
+     border-radius:8px;
+      backdrop-filter: blur(10px);
+         box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
  }
+
 
 .ol-ctx-menu-container li.ol-ctx-menu-separator hr {
   
    background-image: none;
+   padding:5px;
 
 }
 
 .ol-ctx-menu-container ul {
  
   padding-left: 0px !important;
+}
+
+.ol-ctx-menu-container li:not(.ol-ctx-menu-separator):hover {
+  cursor: pointer;
+  background-color: rgb(215,215,215);
+  color: black;
 }
 
 
@@ -640,7 +655,7 @@ display:none
 
 /* Tooltip container */
 .tooltip {
-    font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   height: 80px;
   position: absolute;
   padding: 10px;
@@ -652,8 +667,8 @@ display:none
   border-radius: 8px;
   top: -40px;
   left: 105%;
-   backdrop-filter: blur(3px);
-   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .tooltip::after {
