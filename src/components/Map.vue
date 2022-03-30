@@ -564,11 +564,12 @@ export default {
     font-family: 'Barlow Condensed', sans-serif;
     font-size:28px;
   background: #f2efe9;
-  color: rgb(80, 79, 79);
+  color: black;
     border-radius: 0%;
       width: 45px;
   height: 45px;
    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+   opacity:0.8;
 }
 
 .ol-control button:active, .ol-control button:hover, .ol-control button:focus {

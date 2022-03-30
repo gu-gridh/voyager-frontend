@@ -40,7 +40,7 @@ export default {
 
 <style>
 /* @import './GUITemplate/css/base.css'; */
-@import './GUITemplate/css/components.css';
+/* @import './GUITemplate/css/components.css'; */
 /* @import './GUITemplate/css/style.css'; */
 /*@import './GUITemplate/css/utilities.css';*/
 
