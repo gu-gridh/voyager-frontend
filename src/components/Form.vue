@@ -278,4 +278,42 @@ export default {
 .form-text{
   font-size:30px;
 }
+
+.v-card {
+  font-size: 20px;
+  font-weight:300;
+}
+
+
+.v-input input {
+  font-size: 20px;
+  font-weight:300;
+}
+
+.v-select__selection{
+  font-size: 20px;
+  font-weight:300;
+  line-height:1.2;
+}
+
+.v-messages__message {
+  font-size: 15px;
+  font-weight:400;
+}
+
+.v-list-item__content{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.v-label{
+  font-size: 18px;
+  font-weight:600;
+  line-height:1.2;
+}
+
+
+
 </style>

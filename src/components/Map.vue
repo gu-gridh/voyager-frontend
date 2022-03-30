@@ -640,19 +640,20 @@ display:none
 
 /* Tooltip container */
 .tooltip {
+    font-family: 'Barlow Condensed', sans-serif;
   height: 80px;
   position: absolute;
   padding: 10px;
-  background: #f2efe9;
+  background-color: rgba(255,255,255,0.7);
   color: rgb(80, 79, 79);
   opacity: 1;
   white-space: nowrap;
   font: 10pt sans-serif;
-  border-radius: 5px;
+  border-radius: 8px;
   top: -40px;
   left: 105%;
-  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
+   backdrop-filter: blur(3px);
+   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .tooltip::after {
