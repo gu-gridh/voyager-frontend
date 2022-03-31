@@ -69,27 +69,27 @@ export default {
     contextMenuItems() {
       return [
         {
-          text: "&nbsp;&nbsp;Add a departure point",
+          text: "Add a departure point",
           classname: "departure-marker",
           icon: this.icons.pin,
           callback: this.addDepartureMarker,
         },
 
         {
-          text: "&nbsp;&nbsp;Add a destination point",
+          text: "Add a destination point",
           classname: "destination-marker",
           icon: this.icons.target,
           callback: this.addDestinationMarker,
         },
 
         {
-          text: "&nbsp;&nbsp;Clear all markers",
+          text: "Clear all markers",
           icon: this.icons.clear,
           callback: this.clearMarkers,
         },
 
         {
-          text: "&nbsp;&nbsp;Remove all trajectories",
+          text: "Remove all trajectories",
           icon: this.icons.clear,
           callback: this.removeAllTrajectories,
         },
@@ -583,7 +583,10 @@ background-image: url(../assets/plusbutton.png)!important;
 }
 
 .ol-ctx-menu-container ul{
-padding:30px!important;
+padding:0px!important;
+}
+.ol-ctx-menu-icon span{
+  padding-left:10px;
 }
 
 
