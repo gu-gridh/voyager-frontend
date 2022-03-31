@@ -646,7 +646,7 @@ width:0px;
   position: fixed;
   width: auto;
   top: 2.0em;
-  left: calc(50% - 100px);
+  left: calc(50% - 50px);
   padding: 15px;
   background-color:rgba(250,250,250,0.7);
   color: rgb(0, 0, 0);
@@ -659,7 +659,7 @@ width:0px;
 @media screen and (max-width: 1350px) {
 .tip {
    width: 360px;
-     left: calc(50% + 80px);
+     left: calc(50% + 100px);
 }
 }
 
