@@ -288,6 +288,7 @@ export default {
 .v-input input {
   font-size: 20px;
   font-weight:300;
+  padding:5px;
 }
 
 .v-select__selection{
@@ -308,9 +309,27 @@ export default {
 }
 
 .v-label{
-  font-size: 19px;
-  font-weight:600;
-  line-height:1.2;
+  font-size: 20px!important;
+  font-weight:400;
+  padding:0px!important;
+  height:30px!important;
+}
+
+.v-menu__content{
+    font-family: 'Barlow Condensed', sans-serif !important;
+       border-radius:10px !important;
+}
+
+
+.v-picker{
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-size:150% !important;
+       border-radius:10px !important;
+}
+
+.v-btn__content{
+  font-size:120% !important;
+  height: 15px !important;
 }
 
 

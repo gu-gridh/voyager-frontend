@@ -574,6 +574,19 @@ export default {
   color: black;
 }
 
+.ol-ctx-menu-zoom-out{
+background-image: url(../assets/minusbutton.png)!important;
+}
+
+.ol-ctx-menu-zoom-in{
+background-image: url(../assets/plusbutton.png)!important;
+}
+
+.ol-ctx-menu-container ul{
+padding:30px!important;
+}
+
+
 
 .ol-control button {
     font-family: 'Barlow Condensed', sans-serif;
