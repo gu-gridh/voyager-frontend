@@ -1,5 +1,5 @@
 <template>
-  <div ref="map-root" style="position: relative; width: 100%; height: 100%">
+  <div ref="map-root" style="position: relative; width: 100%; height: 100%; background-color:#b2d2dd;">
     <div ref="tip" class="tip">{{ tip }}</div>
     <div ref="tooltip" class="tooltip"></div>
     <v-overlay :value="overlay" :absolute="true">
@@ -540,32 +540,67 @@ export default {
 
 <style>
 
-.ol-ctx-menu-zoom-out {
-  background-image: url("https://img.icons8.com/material/50/000000/minus--v2.png") !important;
-}
 
-.ol-ctx-menu-zoom-in {
-  background-image: url("https://img.icons8.com/material/50/000000/plus-math--v2.png") !important;
-}
 
 .ol-ctx-menu-container {
-  padding: 1.5em;
-  background: #f2efe9;
-  color: rgb(80, 79, 79);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:17px;
+    font-weight:300;
+  padding: 1.0em;
+  background-color:rgba(255,255,255,0.8);
+  color: black;
+  opacity:0.8;
+     border-radius:8px;
+      backdrop-filter: blur(10px);
+         box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
  }
 
+
 .ol-ctx-menu-container li.ol-ctx-menu-separator hr {
+  
    background-image: none;
+   padding:5px;
 
 }
 
 .ol-ctx-menu-container ul {
+ 
   padding-left: 0px !important;
 }
 
+.ol-ctx-menu-container li:not(.ol-ctx-menu-separator):hover {
+  cursor: pointer;
+  background-color: rgb(215,215,215);
+  color: black;
+}
+
+.ol-ctx-menu-zoom-out{
+background-image: url(../assets/minusbutton.png)!important;
+}
+
+.ol-ctx-menu-zoom-in{
+background-image: url(../assets/plusbutton.png)!important;
+}
+
+.ol-ctx-menu-container ul{
+padding:0px!important;
+}
+.ol-ctx-menu-icon span{
+  padding-left:10px;
+}
+
+
+
 .ol-control button {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:28px;
   background: #f2efe9;
-  color: rgb(80, 79, 79);
+  color: black;
+    border-radius: 0%;
+      width: 45px;
+  height: 45px;
+   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+   opacity:0.8;
 }
 
 .ol-control button:active, .ol-control button:hover, .ol-control button:focus {
@@ -573,38 +608,83 @@ export default {
 
 }
 
-.tip {
+.ol-zoom-in {
+  left:520px;
+  top:1.4em;
+   position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
 
-  width: auto;
-  position: absolute;
-  top: .5em;
-  left: 75px;
-  margin-right: 75px;
-  padding: 15px;
-  background: #f2efe9;
-  color: rgb(80, 79, 79);
-  opacity: 1;
-  border-radius: 5px;
-  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
+
+}
+.ol-zoom-in:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.ol-zoom-out {
+   left:520px;
+    top:3.05em;
+     position: fixed;
+  margin-top: 3px;
+  background-color: rgba(0, 0, 0, 0.8);
+  
+}
+.ol-zoom-out:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.ol-control {
+width:0px;
+
 }
 
+.tip {
+  letter-spacing: 0px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.2;
+   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: fixed;
+  width: auto;
+  top: 2.0em;
+  left: calc(50% - 100px);
+  padding: 15px;
+  background-color:rgba(250,250,250,0.7);
+  color: rgb(0, 0, 0);
+  opacity: 1;
+  border-radius: 8px;
+   backdrop-filter: blur(3px);
+     transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1350px) {
+.tip {
+   width: 360px;
+     left: calc(50% + 80px);
+}
+}
+
+@media screen and (max-width: 980px) {
+.tip {
+display:none
+}
+}
 
 /* Tooltip container */
 .tooltip {
+  font-family: 'Barlow Condensed', sans-serif;
   height: 80px;
   position: absolute;
   padding: 10px;
-  background: #f2efe9;
+  background-color: rgba(255,255,255,0.7);
   color: rgb(80, 79, 79);
   opacity: 1;
   white-space: nowrap;
   font: 10pt sans-serif;
-  border-radius: 5px;
+  border-radius: 8px;
   top: -40px;
   left: 105%;
-  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
+  backdrop-filter: blur(3px);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .tooltip::after {

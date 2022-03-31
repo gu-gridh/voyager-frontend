@@ -5,23 +5,29 @@
         <v-col>
           <Header/>
           
-          <v-card color="#FFFCF5">
-            <v-card-title>Settings</v-card-title>
+          <v-card color="" style="font-weight:600; pointer-events:auto; border-radius:0 0 20px 20px; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
+            <v-card-title></v-card-title>
 
-            <v-window v-model="step">
-              <v-window-item :value="1">  
+            <v-window v-model="step" style="padding:3px 0 0 0;">
+              <v-window-item :value="1" >  
 
+<div style="width:100%">
+  <div style="width:50%; float:left;">
                 <date-range-input 
                   name="start" 
                   color="primary" 
                   label="Start date"
                   v-model="form.params.startDate"/>
+                      </div>
 
+ <div style="width:50%; float:left;">
                 <date-range-input 
                   name="end" 
                   color="primary" 
                   label="End date"
                   v-model="form.params.endDate"/>
+    </div>
+                  </div>
 
                 <v-select
                   v-model="form.params.propulsionType"
@@ -98,6 +104,7 @@
                 :disabled="step === 1"
                 text
                 @click="step--"
+                style="font-size:18px; font-weight:300; left:10px; margin-bottom:20px;"
               >
                 Back
               </v-btn>
@@ -105,14 +112,15 @@
                 text
                 v-show="step != 2"
                 :disabled="step === 2"
-                color="teal accent-4"
+                color="black"
+                 style="font-size:18px; font-weight:400; left:10px; margin-bottom:20px;"
                 @click="step++"
               >
                 Advanced
               </v-btn>
-              <v-btn text @click="clearForm"> Clear form</v-btn>
+              <v-btn text @click="clearForm"  style="font-size:18px; font-weight:400; left:10px; margin-bottom:20px;"> Clear form</v-btn>
               <v-spacer></v-spacer>
-              <v-btn id="submit" color="primary" @click="submit"> Run </v-btn>
+              <v-btn id="submit" color="primary" style="font-size:22px; padding:25px; font-weight:600; right:10px; margin-bottom:20px;" @click="submit"> <b>Run</b> </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -266,4 +274,66 @@ export default {
   flex: 1 1 auto;
   padding: 1em;
 }
+
+.form-text{
+  font-size:30px;
+}
+
+.v-card {
+  font-size: 20px;
+  font-weight:300;
+}
+
+
+.v-input input {
+  font-size: 20px;
+  font-weight:300;
+  padding:5px;
+}
+
+.v-select__selection{
+  font-size: 20px;
+  font-weight:300;
+  line-height:1.2;
+}
+
+.v-messages__message {
+  font-size: 15px;
+  font-weight:400;
+}
+
+.v-list-item__content{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.v-label{
+  font-size: 20px!important;
+  font-weight:400;
+  padding:0px!important;
+  height:30px!important;
+}
+
+.v-menu__content{
+    font-family: 'Barlow Condensed', sans-serif !important;
+       border-radius:10px !important;
+}
+
+
+.v-picker{
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-size:150% !important;
+       border-radius:10px !important;
+}
+
+.v-btn__content{
+  font-size:120% !important;
+  height: 15px !important;
+}
+
+
+
+
+
 </style>

@@ -14,7 +14,7 @@ export default {
         }
     },
     data: '',
-    tip: '🖱️ Right click on the map to add start points and a destination for your vessels!',
+    tip: 'Right-click on the map to add departure points and a destination for your vessels!',
     icons: {
         pin: "https://img.icons8.com/small/50/000000/sailing-ship-small.png",
         target: "https://img.icons8.com/small/50/000000/finish-flag.png",
@@ -28,11 +28,7 @@ export default {
         blurb: `
         The Ocean Voyager is an agent-based simulation tool capable of generating seafaring trajectories based on winds and sea currents. 
         The tool is developed in collaboration by the Centre for Digital Humanities and the Swedish Rock Art Research Archive 
-        at the University of Gothenburg and Ohio State University. <br><br>
-
-        Voyager will be further developed within the research programme Maritime Encounters, 
-        a counterpoint to the dominant terrestrial narrative of 
-        European prehistory (funded by Riksbankens Jubileumsfond, 2022–2027).
+        at the University of Gothenburg and Ohio State University. <br>
         `,
     },
 
@@ -111,7 +107,8 @@ export default {
         The tool is currently a prototype but will be fully developed within the research programme 
         Maritime Encounters a counterpoint to the dominant terrestrial narrative of European prehistory 
         (funded by Riksbankens Jubileumsfond, 2022–2027), led by Prof. Johan Ling, Department of 
-        Historical studies, SHFA, University of Gothenburg`
+        Historical studies, SHFA, University of Gothenburg`,
+        
     },
     projection: {
         to: "EPSG:4326",

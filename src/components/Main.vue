@@ -1,32 +1,33 @@
 <template>
     <v-main>
-      <v-container id="main-container" fluid class="fill-height fill-width">
-        <v-row id="content-row" no-gutters>
-          <v-col class="sidebar-container" :cols="4">
-            <div class='sidebar pa-5'>
+      <div id="main-container">
+        <div id="map-container">
+            <Map/>
+          </div>
+        <div id="content-row" no-gutters>
+            <div class="sidebar-container">
+            <div class="sidebar pa-5">
               <Form/>
             </div>
-          </v-col>
-          <v-col :cols="8">
-            <Map/>
-          </v-col>
-        </v-row>
-      </v-container>
-      <Footer/>
+          </div>
+        
+        </div>
+      </div>
+    <!--   <Footer/> -->
     </v-main>
 </template>
 
 <script>
 import Form from './Form.vue';
 import Map from './Map.vue'
-import Footer from './Footer.vue'
+/* import Footer from './Footer.vue' */
 export default {
   name: 'Main',
 
   components: {
     Form,
     Map,
-    Footer
+    // Footer
   },
 
   data: () => ({
@@ -39,40 +40,59 @@ export default {
 
 <style>
 /* @import './GUITemplate/css/base.css'; */
-@import './GUITemplate/css/components.css';
+/* @import './GUITemplate/css/components.css'; */
 /* @import './GUITemplate/css/style.css'; */
-@import './GUITemplate/css/utilities.css';
+/*@import './GUITemplate/css/utilities.css';*/
 
 @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Clicker+Script&display=swap');
 
 .foot {
-  margin-top: 0;
+  float:left;
+  margin-top: 100vh;
   height: 180px;
-  background-color: rgb(114, 177, 196);
+  background-color: rgb(95, 95, 95);
 }
 
 #content-row {
-  height: 100%;
-  width: 100%;
+
+  display:flex;
+  flex-flow: row wrap;
 }
 
 #main-container {
+   float:left;
+  position:relative;
   padding: 0;
-}
-
-.v-main {
-  height: 100%;
-  width: 100%;
+  width:100%;
+  left:0;
 }
 
 .sidebar-container {
-    background-color: rgb(170,211,223);
-    padding: 10px;
+    pointer-events: none;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight:600;
+  margin-left:0px;
+  top:0;
+  float:left;
+  position:absolute;
+  background-color: rgba(200,200,200,0.0)
+;    /* background-color: #788f97; */
+    width:600px;
+    height:calc(100vh);
+ min-height:890px;
+    padding:10px;
+    transform: scale(0.9);
+      transform-origin: top left;
 }
-.map-container {
-    width: 70%;
-    height: 100%;
+
+#map-container {
+
+  position:relative;
+  height:calc(100vh);
+  min-height:890px;
+ box-shadow: -1rem 0rem 1rem rgba(0, 0, 0, 0.2);
 }
+
 </style>
