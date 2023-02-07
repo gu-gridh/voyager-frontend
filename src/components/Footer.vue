@@ -6,8 +6,8 @@
           <b>CONTACT US:</b><br />
           Professor Johan Ling <br />
           <a href="mailto:johan.ling@gu.se">johan.ling@gu.se</a><br />
-          Centre for Digital Humanities<br />
-          <a href="mailto:cdh@lir.gu.se">cdh@lir.gu.se</a>
+          GRIDH<br />
+          <a href="mailto:gridh@gu.se">gridh@gu.se</a>
         </div>
       </v-col>
       <v-col>

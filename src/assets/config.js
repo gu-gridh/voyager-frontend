@@ -27,7 +27,7 @@ export default {
         subtitle: "Exploration of seafaring",
         blurb: `
         The Ocean Voyager is an agent-based simulation tool capable of generating seafaring trajectories based on winds and sea currents. 
-        The tool is developed in collaboration by the Centre for Digital Humanities and the Swedish Rock Art Research Archive 
+        The tool is developed in collaboration by GRIDH and the Swedish Rock Art Research Archive
         at the University of Gothenburg and Ohio State University. <br>
         `,
     },
@@ -94,8 +94,8 @@ export default {
         text: `Ocean Voyager simulates sea routes on a global scale, during different seasons 
         and phases in history and prehistory. The tool will provide novel approaches to analysing 
         and validating ancient trade routes, migration and cultural exchange. The tool is being developed 
-        in collaboration by the Centre for Digital Humanities, the Department of Historical Studies, 
-        the Swedish Rock Art Research Archive at the University of Gothenburg and Ohio State University. 
+        in collaboration by GRIDH, the Department of Historical Studies, the Swedish Rock Art Research
+	Archive at the University of Gothenburg and Ohio State University.
 
         Voyager utilizes experimental data on prehistoric boats with different capacity 
         (e.g. log boats, plank-built boats, bark boats, skin boats) and various modes of propulsion 
