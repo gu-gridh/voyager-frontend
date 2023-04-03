@@ -28,7 +28,7 @@ export default {
         blurb: `
         The Ocean Voyager is an agent-based simulation tool capable of generating seafaring trajectories based on winds and sea currents. 
         The tool is developed in collaboration by GRIDH and the Swedish Rock Art Research Archive
-        at the University of Gothenburg and Ohio State University. <br>
+        at the University of Gothenburg and Ohio State University. This webpage shows a simplified version of the research tool. <br>
         `,
     },
 
@@ -104,7 +104,7 @@ export default {
         collected by Copernicus (European Union's Earth Observation Programme) 
         and ECMWF (European Centre for Medium-Range Weather Forecasts). <br><br>
 
-        The tool is currently a prototype but will be fully developed within the research programme 
+        The tool on this page is a prototype for purposes of demonstration; the tool is currently being developed within the research programme 
         Maritime Encounters a counterpoint to the dominant terrestrial narrative of European prehistory 
         (funded by Riksbankens Jubileumsfond, 2022–2027), led by Prof. Johan Ling, Department of 
         Historical studies, SHFA, University of Gothenburg`,
