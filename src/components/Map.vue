@@ -62,7 +62,7 @@ export default {
     projection: config.projection,
     tip: config.tip,
     selected: null,
-    error: null
+    error: null,
   }),
 
   computed: {
@@ -170,7 +170,6 @@ export default {
         this.onContextMenuOpen(e, contextMenuControl)
       );
 
-
       return map;
     },
   },
@@ -186,6 +185,7 @@ export default {
   },
 
   methods: {
+
     onContextMenuOpen(e, contextMenuControl) {
 
         const feature = this.map.forEachFeatureAtPixel(e.pixel, f => f);
@@ -485,14 +485,21 @@ export default {
       const { departurePoints, launchInterval, startDate, endDate, destinationPoint, ...ps } = params;
 
       if ((departurePoints.length === 0) || (!destinationPoint)) {
-        this.error = "Please enter a destination and departure on the map."
-        setTimeout(() => {
+        //drifting has no destination point
+        if(this.proplusionType === "drifting" && !destinationPoint) {
+          return
+        }
+        else {
+          this.error = "Please enter a destination and departure on the map."
+          setTimeout(() => {
           this.overlay = false;
           this.error = null;
-        }, 5000)
+          }, 5000)
 
-        return;
-      }
+          return;
+        }
+       }
+        
 
       // const trajectories = []
       const dateRange = this.datesInRange([startDate, endDate], launchInterval);
