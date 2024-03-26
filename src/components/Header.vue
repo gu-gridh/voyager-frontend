@@ -1,15 +1,16 @@
 <template>
   <v-card color="" style="color:black;pointer-events:auto;box-shadow:none; border-radius:20px 20px 0 0; border-width:0 0 0.5px 0; border-style:dashed; border-color:grey; padding:20px 0 0 0; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
-    <div style=" margin-left:30px;  font-size:90px; font-weight:100; line-height: 0.75; margin-bottom:30px;">Ocean<br>Voyager <span style="font-size:60px">⛵️</span></div>
-    <div style="  font-weight:300; margin-left:35px; font-size:30px">{{ header.subtitle }}</div>
+    <div class="voy-header" style=" margin-left:30px;  font-size:90px; font-weight:100; line-height: 0.75; margin-bottom:30px;">Ocean<br>Voyager <span class="icon" style="font-size:60px">⛵️</span></div>
+    <div class="subtitle" style="  font-weight:300; margin-left:35px; font-size:30px">{{ header.subtitle }}</div>
     <div style=" opacity:1; font-weight:300; font-size:19px; line-height: 1.25; text-align:justify; padding:5px 35px 20px 35px;">
-      <span v-html="header.blurb"></span>
+      <span class="blurb" v-html="header.blurb"></span>
     </div>
     
     <v-card-actions>
       <v-dialog v-model="instructionsDialog" scrollable max-width="800px">
         <template v-slot:activator="{ on }">
           <v-btn
+          class="btn"
             v-on="on"
             text
             style="font-size:20px; font-weight:400; left:18px; margin-bottom:10px; margin-right:30px;"
@@ -51,7 +52,7 @@
 
       <v-dialog v-model="aboutDialog" max-width="900px">
         <template v-slot:activator="{ on }">
-          <v-btn v-on="on" text style="font-size:20px; font-weight:400; margin-bottom:10px;" @click="aboutDialog = true">
+          <v-btn class="btn" v-on="on" text style="font-size:20px; font-weight:400; margin-bottom:10px;" @click="aboutDialog = true">
             About
           </v-btn>
         </template>
@@ -69,7 +70,7 @@
           <a href="mailto:gridh@gu.se">gridh@gu.se</a>
         </div>
 
-            <div id="logotypes" style=margin-top:-100px;>   
+            <div id="logotypes" style="margin-top:-100px;">   
               
                <div style="float:right;">
                       <div class="image-container" style="width:350px; height:120px">
@@ -183,5 +184,42 @@ height:200px;
 
 .ov-button{
 font-size:80px;
+}
+
+@media screen and (max-width: 900px) {
+  .voy-header {
+    font-size: 50px !important;
+  }
+  .icon {
+    font-size: 25px !important;
+  }
+  .btn {
+    font-size: 14px !important;
+  }
+  .subtitle {
+    font-size: 25px !important;
+  }
+  .blurb {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .voy-header {
+    font-size: 30px !important;
+  }
+  .icon {
+    font-size: 10px !important;
+  }
+  .btn {
+    font-size: 10px !important;
+  }
+  .subtitle {
+    font-size: 14px !important;
+  }
+  .blurb {
+    font-size: 12px !important;
+  }
+  
 }
 </style>

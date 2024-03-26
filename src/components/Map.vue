@@ -168,6 +168,7 @@ export default {
 
       contextMenuControl.on("open", (e) => 
         this.onContextMenuOpen(e, contextMenuControl)
+        
       );
 
       return map;
@@ -187,9 +188,9 @@ export default {
   methods: {
 
     onContextMenuOpen(e, contextMenuControl) {
+      //check if not on land // TODO
 
         const feature = this.map.forEachFeatureAtPixel(e.pixel, f => f);
-
         if (feature && feature.get("type") === "removable") {
           contextMenuControl.clear();
           this.removeMarkerItem.data = { marker: feature };
@@ -232,7 +233,6 @@ export default {
       if (feature) {
         if (feature.getId() === 'trajectory') {
           this.selected = feature;
-
           // selectStyle.getFill().setColor(f.get("COLOR") || "#eeeeee");
           feature.setStyle(selectStyle);
 
