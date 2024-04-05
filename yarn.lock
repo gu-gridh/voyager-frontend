@@ -5954,6 +5954,11 @@ ol-contextmenu@^4.1.0:
   resolved "https://registry.yarnpkg.com/ol-contextmenu/-/ol-contextmenu-4.1.0.tgz#16a4f60573044a9976413a35736a160b74637488"
   integrity sha512-/Gxb+lv4oJKVCtL1Sa7hmOI9zMI1IZ7US2o4uqeXCOkCNvBy9sQtVu0bfp+vICiuxCH92GGrm7gdyKOaUvgbkA==
 
+ol-ext@^4.0.17:
+  version "4.0.17"
+  resolved "https://registry.yarnpkg.com/ol-ext/-/ol-ext-4.0.17.tgz#9f9d7cbc86718897af8439c5fb69f6b8acdc9236"
+  integrity sha512-o3D+x7dzUIRyVDshmNceGgcNKX0N+Xf/vgQ1QwEIsBDeRJgraAeKtREGOPP0upnI8ldehoLMsCIiZgnsWxWAVw==
+
 ol-mapbox-style@^6.5.1:
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/ol-mapbox-style/-/ol-mapbox-style-6.5.3.tgz#2d31db7d9bd5fd701a8988575797bb810ea98a9e"

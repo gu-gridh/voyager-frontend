@@ -70,7 +70,7 @@ export default {
 }
 
 .sidebar-container {
-    pointer-events: none;
+  pointer-events: none;
   font-family: "Barlow Condensed", sans-serif;
   font-weight:600;
   margin-left:0px;
@@ -93,6 +93,24 @@ export default {
   height:calc(100vh);
   min-height:890px;
  box-shadow: -1rem 0rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+
+  .sidebar-container {
+    width:50%;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+
+  .sidebar-container {
+    width:80%;
+    max-height: 60% !important;
+    min-height: 600px !important;
+  }
+  
 }
 
 </style>

@@ -8,6 +8,7 @@
 import Main from './components/Main.vue'
 import config from './assets/config'
 
+
 export default {
   name: 'App',
 

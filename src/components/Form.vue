@@ -1,11 +1,11 @@
 <template>
   <v-form ref="form" v-model="valid" lazy-validation>
-    <v-container>
+    <v-container class="form-container">
       <v-row>
         <v-col>
           <Header/>
           
-          <v-card color="" style="font-weight:600; pointer-events:auto; border-radius:0 0 20px 20px; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
+          <v-card class="form-card" color="" style="font-weight:600; pointer-events:auto; border-radius:0 0 20px 20px; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
             <v-card-title></v-card-title>
 
             <v-window v-model="step" style="padding:3px 0 0 0;">
@@ -100,6 +100,7 @@
 
             <v-card-actions>
               <v-btn
+              class="btn"
                 v-show="step != 1"
                 :disabled="step === 1"
                 text
@@ -109,6 +110,7 @@
                 Back
               </v-btn>
               <v-btn
+              class="btn"
                 text
                 v-show="step != 2"
                 :disabled="step === 2"
@@ -118,7 +120,7 @@
               >
                 Advanced
               </v-btn>
-              <v-btn text @click="clearForm"  style="font-size:18px; font-weight:400; left:10px; margin-bottom:20px;"> Clear form</v-btn>
+              <v-btn class="btn" text @click="clearForm"  style="font-size:18px; font-weight:400; left:10px; margin-bottom:20px;"> Clear form</v-btn>
               <v-spacer></v-spacer>
               <v-btn id="submit" color="primary" style="font-size:22px; padding:25px; font-weight:600; right:10px; margin-bottom:20px;" @click="submit"> <b>Run</b> </v-btn>
             </v-card-actions>
@@ -332,8 +334,109 @@ export default {
   height: 15px !important;
 }
 
+@media screen and (max-width: 900px){
+  .v-card {
+    font-size: 15px;
+    font-weight:300;
+  }
 
+  .v-input input {
+    font-size: 15px;
+    font-weight:300;
+    padding:5px;
+  }
 
+  .v-select__selection{
+    font-size: 15px;
+    font-weight:300;
+    line-height:1.2;
+  }
+
+  .v-messages__message {
+    font-size: 10px;
+    font-weight:400;
+  }
+
+  .v-list-item__content{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight:400;
+    line-height:1.2;
+  }
+
+  .v-label{
+    font-size: 15px!important;
+    font-weight:400;
+    padding:0px!important;
+    height:30px!important;
+  }
+
+  .v-menu__content{
+      font-family: 'Barlow Condensed', sans-serif !important;
+         border-radius:10px !important;
+  }
+  .btn {
+    font-size: 14px !important;
+  }
+  #submit {
+    font-size: 16px !important;
+    padding: 0 0 0 0 !important;
+  }
+}
+@media screen  and (max-width: 600px){
+  .v-card {
+    font-size: 10px;
+    font-weight:300;
+  }
+
+  .v-input input {
+    font-size: 10px;
+    font-weight:300;
+    padding:5px;
+  }
+
+  .v-select__selection{
+    font-size: 10px;
+    font-weight:300;
+    line-height:1.2;
+  }
+
+  .v-messages__message {
+    font-size: 5px;
+    font-weight:400;
+  }
+
+  .v-list-item__content{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight:400;
+    line-height:1.2;
+  }
+
+  .v-label{
+    font-size: 10px!important;
+    font-weight:400;
+    padding:0px!important;
+    height:30px!important;
+  }
+
+  .v-menu__content{
+      font-family: 'Barlow Condensed', sans-serif !important;
+         border-radius:10px !important;
+  }
+  .btn {
+    font-size: 10px !important;
+  }
+  #submit {
+    font-size: 12px !important;
+    padding: 0 0 0 0 !important;
+  }
+  v-text-field {
+    padding: 0 0 0 0 !important;
+  }
+  v-input__slot {
+    padding: 0 0 0 0 !important;
+    margin-bottom: 0px;
+  }
+}
 
 
 </style>
