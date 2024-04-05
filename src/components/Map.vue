@@ -44,9 +44,12 @@ import * as proj from "ol/proj";
 
 import "ol-contextmenu/dist/ol-contextmenu.css";
 import "ol/ol.css";
+import "ol-ext/dist/ol-ext.css";
 
 import trajectoryAPI from "./api/trajectory.api";
 import config from "../assets/config";
+
+import LongTouch from "ol-ext/interaction/LongTouch";
 
 export default {
   name: "Map",
@@ -120,6 +123,8 @@ export default {
       });
     },
 
+    
+
     map() {
       const attribution = new control.Attribution({
         collapsible: false,
@@ -129,6 +134,7 @@ export default {
         width: 'auto',
         defaultItems: true,
         items: this.contextMenuItems,
+        eventType: "dblclick" //double click for touch screen
       });
 
       var tipControl = new control.Control({element: this.$refs.tip});
@@ -141,7 +147,7 @@ export default {
       });
 
       const map = new Map({
-        interactions: interaction.defaults({mouseWheelZoom: false}),
+        interactions: interaction.defaults({mouseWheelZoom: false, doubleClickZoom: false}),
         controls: control.defaults().extend([attribution, contextMenuControl, tipControl]),
         target: this.$refs["map-root"],
         layers: [...this.tileLayers, this.vectorLayer],
@@ -158,6 +164,18 @@ export default {
         }),
       });
 
+       // Longtouch interaction TODO
+    var touchi = new LongTouch({
+      pixelTolerance: 1,
+      // Handle longtouch > create a new feature
+      handleLongTouchEvent: function(e) {
+        //TODO open context menu on long touch
+        return e
+
+      } 
+    });
+    map.addInteraction(touchi);
+
 
       // Callbacks
       map.on("pointermove", (e) =>
@@ -165,6 +183,8 @@ export default {
       );
 
       map.on("moveend", this.updateBbox);
+
+      //map.on("lonchtouch", (e) => console.log(e) )
 
       contextMenuControl.on("open", (e) => 
         this.onContextMenuOpen(e, contextMenuControl)
@@ -189,7 +209,6 @@ export default {
 
     onContextMenuOpen(e, contextMenuControl) {
       //check if not on land // TODO
-
         const feature = this.map.forEachFeatureAtPixel(e.pixel, f => f);
         if (feature && feature.get("type") === "removable") {
           contextMenuControl.clear();
