@@ -161,6 +161,7 @@ export default {
             this.projection.from
           ),
           constrainResolution: true,
+          enableRotation: false
         }),
       });
 
