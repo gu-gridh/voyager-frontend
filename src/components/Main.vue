@@ -13,21 +13,21 @@
         
         </div>
       </div>
-    <!--   <Footer/> -->
+      <Footer/>
     </v-main>
 </template>
 
 <script>
 import Form from './Form.vue';
 import Map from './Map.vue'
-/* import Footer from './Footer.vue' */
+import Footer from './Footer.vue'
 export default {
   name: 'Main',
 
   components: {
     Form,
     Map,
-    // Footer
+    Footer
   },
 
   data: () => ({
@@ -39,14 +39,14 @@ export default {
 </script>
 
 <style>
-/* @import './GUITemplate/css/base.css'; */
-/* @import './GUITemplate/css/components.css'; */
-/* @import './GUITemplate/css/style.css'; */
-/*@import './GUITemplate/css/utilities.css';*/
+/* @import './GUITemplate/css/base.css';
+@import './GUITemplate/css/components.css';
+@import './GUITemplate/css/style.css';
+@import './GUITemplate/css/utilities.css'; */
 
-@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script&display=swap'); */
 
 .foot {
   float:left;
@@ -80,7 +80,7 @@ export default {
   background-color: rgba(200,200,200,0.0)
 ;    /* background-color: #788f97; */
     width:600px;
-    height:calc(100vh);
+    height:calc(100vh - 82px);
  min-height:890px;
     padding:10px;
     transform: scale(0.9);
