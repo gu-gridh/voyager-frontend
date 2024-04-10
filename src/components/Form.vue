@@ -248,6 +248,10 @@ export default {
 </script>
 
 <style>
+
+.v-card__actions{
+  padding: 5px !important;
+}
 .v-card--reveal {
   bottom: 0;
   opacity: 1 !important;
