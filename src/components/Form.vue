@@ -5,7 +5,7 @@
         <v-col>
           <Header/>
           
-          <v-card class="form-card" color="" style="font-weight:600; pointer-events:auto; border-radius:0 0 20px 20px; box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2); background-color:rgba(255,255,255,0.7);   backdrop-filter: blur(10px);">
+          <v-card class="form-card" color="" style="">
             <v-card-title></v-card-title>
 
             <v-window v-model="step" style="padding:3px 0 0 0;">
@@ -248,6 +248,30 @@ export default {
 </script>
 
 <style>
+
+.form-card{
+  font-weight:600; 
+  pointer-events:auto; 
+  border-radius:0 0 20px 20px!important;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2); 
+  background-color:rgba(255,255,255,0.7)!important; 
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  height:calc(50vh - 10px);
+  overflow:auto;
+}
+
+@media screen and (max-height: 850px) {
+.form-card{
+  height:calc(40vh);
+}
+}
+
+@media screen and (max-height: 780px) {
+.form-card{
+  height:calc(35vh);
+}
+}
 
 .v-card__actions{
   padding: 5px !important;

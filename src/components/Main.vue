@@ -48,12 +48,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Clicker+Script&display=swap'); */
 
-.foot {
-  float:left;
-  margin-top: 100vh;
-  height: 180px;
-  background-color: rgb(95, 95, 95);
-}
 
 #content-row {
 
@@ -80,18 +74,16 @@ export default {
   background-color: rgba(200,200,200,0.0)
 ;    /* background-color: #788f97; */
     width:600px;
-    height:calc(100vh - 82px);
- min-height:890px;
+    height:calc(100% - 80px);
     padding:10px;
     transform: scale(0.9);
       transform-origin: top left;
+
 }
 
 #map-container {
-
   position:relative;
-  height:calc(100vh);
-  min-height:890px;
+  height:calc(100vh - 80px);
  box-shadow: -1rem 0rem 1rem rgba(0, 0, 0, 0.2);
 }
 

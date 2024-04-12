@@ -25,6 +25,7 @@ position: absolute;
 z-index: 3000;
 bottom: 0px;;
 font-family: "Barlow Condensed", sans-serif;
+position:absolute;
 }
 
 a {
@@ -33,7 +34,7 @@ font-weight: bold;
 #CDHLogo {
 float: right;
 margin-top: 0px;
-margin-right: 10px;
+margin-right: 50px;
 width: auto;
 height: auto;
 text-align: left;
