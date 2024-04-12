@@ -28,5 +28,13 @@ export default {
 </script>
 
 <style>
-body {overflow-y: hidden;}
+html,body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 !important;
+  overflow: hidden !important;
+  background-color:rgb(45,45,45);
+  -ms-overflow-style: none;
+}
+
 </style>

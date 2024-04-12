@@ -258,7 +258,13 @@ export default {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   height:calc(50vh - 10px);
-  overflow:auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.form-card::-webkit-scrollbar {
+  width: 0 !important
 }
 
 @media screen and (max-height: 850px) {

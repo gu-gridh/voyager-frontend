@@ -61,6 +61,11 @@ export default {
   padding: 0;
   width:100%;
   left:0;
+ overflow:hidden;
+}
+
+#main-container::-webkit-scrollbar {
+  width: 0 !important
 }
 
 .sidebar-container {
@@ -71,20 +76,19 @@ export default {
   top:0;
   float:left;
   position:absolute;
-  background-color: rgba(200,200,200,0.0)
-;    /* background-color: #788f97; */
-    width:600px;
-    height:calc(100% - 80px);
-    padding:10px;
-    transform: scale(0.9);
-      transform-origin: top left;
-
+  background-color: rgba(200,200,200,0.0);
+  width:600px;
+  height:calc(100% - 80px);
+  padding:10px;
+  transform: scale(0.9);
+  transform-origin: top left;
 }
 
 #map-container {
   position:relative;
   height:calc(100vh - 80px);
  box-shadow: -1rem 0rem 1rem rgba(0, 0, 0, 0.2);
+ overflow:hidden;
 }
 
 @media screen and (max-width: 900px) {
